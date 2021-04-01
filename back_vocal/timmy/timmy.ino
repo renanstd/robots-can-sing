@@ -3,8 +3,10 @@
 #include <Adafruit_SSD1306.h>
 #include <Servo.h>
 
+
 Adafruit_SSD1306 display = Adafruit_SSD1306();
 Servo servo;
+
 
 void setup(){
   servo.attach(3);
@@ -16,15 +18,18 @@ void setup(){
   display.clearDisplay();
 }
 
+
 void loop() {
   servo.write(80);
   
   display.clearDisplay();
   display.fillRect(30, 8, 10, 20, WHITE);
   display.fillRect(90, 8, 10, 20, WHITE);
+  display.fillRect(34, 18, 6, 4, BLACK);
+  display.fillRect(94, 18, 6, 4, BLACK);
   display.fillCircle(65, 25, 1, WHITE);
   display.display();
-  delay(2500);
+  delay(1000);
   
   display.clearDisplay();
   display.fillRect(30, 12, 10, 2, WHITE);
@@ -36,9 +41,18 @@ void loop() {
   display.clearDisplay();
   display.fillRect(30, 8, 10, 20, WHITE);
   display.fillRect(90, 8, 10, 20, WHITE);
+  display.fillRect(30, 18, 6, 4, BLACK);
+  display.fillRect(90, 18, 6, 4, BLACK);
   display.fillCircle(65, 25, 1, WHITE);
   display.display();
-  delay(2500);
+  delay(1000);
+  
+  display.clearDisplay();
+  display.fillRect(30, 12, 10, 2, WHITE);
+  display.fillRect(90, 12, 10, 2, WHITE);
+  display.fillCircle(65, 25, 4, WHITE);
+  display.display();
+  delay(100);
 
   servo.write(100);
   display.clearDisplay();
