@@ -20,56 +20,56 @@ void setup(){
 
 
 void loop() {
-  servo.write(80);
-  
+  servo.write(90);
+
   display.clearDisplay();
   display.fillRect(30, 8, 10, 20, WHITE);
   display.fillRect(90, 8, 10, 20, WHITE);
   display.fillRect(34, 18, 6, 4, BLACK);
   display.fillRect(94, 18, 6, 4, BLACK);
-  display.fillCircle(65, 25, 1, WHITE);
+  display.drawLine(60, 31, 70, 31, WHITE);
   display.display();
-  delay(1000);
+  delay(3000);
   
   display.clearDisplay();
   display.fillRect(30, 12, 10, 2, WHITE);
   display.fillRect(90, 12, 10, 2, WHITE);
-  display.fillCircle(65, 25, 1, WHITE);
+  display.drawLine(60, 31, 70, 31, WHITE);
   display.display();
-  delay(100);
+  delay(50);
 
   display.clearDisplay();
   display.fillRect(30, 8, 10, 20, WHITE);
   display.fillRect(90, 8, 10, 20, WHITE);
   display.fillRect(30, 18, 6, 4, BLACK);
   display.fillRect(90, 18, 6, 4, BLACK);
-  display.fillCircle(65, 25, 1, WHITE);
+  display.drawLine(60, 31, 70, 31, WHITE);
   display.display();
-  delay(1000);
+  delay(3000);
   
   display.clearDisplay();
   display.fillRect(30, 12, 10, 2, WHITE);
   display.fillRect(90, 12, 10, 2, WHITE);
   display.fillCircle(65, 25, 4, WHITE);
   display.display();
-  delay(100);
+  delay(50);
 
-  servo.write(100);
-  display.clearDisplay();
-  display.fillRect(30, 12, 10, 2, WHITE);
-  display.fillRect(90, 12, 10, 2, WHITE);
-  display.fillCircle(65, 25, 4, WHITE);
-  display.display();
+//  servo.write(100);
+//  display.clearDisplay();
+//  display.fillRect(30, 12, 10, 2, WHITE);
+//  display.fillRect(90, 12, 10, 2, WHITE);
+//  display.fillCircle(65, 25, 4, WHITE);
+//  display.display();
   
-  for (int i=3136; i>2093; i--) {
-    tone(11, i);
-    delay(0.3);
-  }
-  for (int i=2093; i<3136; i++) {
-    tone(11, i);
-    delay(0.3);
-  }
+//  for (int i=3136; i>2093; i--) {
+//    tone(11, i);
+//    delay(0.3);
+//  }
+//  for (int i=2093; i<3136; i++) {
+//    tone(11, i);
+//    delay(0.3);
+//  }
 
-  noTone(11);
-  delay(300); 
+//  noTone(11);
+//  delay(300); 
 }
