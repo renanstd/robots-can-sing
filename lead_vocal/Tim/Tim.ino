@@ -13,18 +13,18 @@ struct Movement {
 
 Movement melody[] = {
     // Intro
-    {NOTE_CS6, 8, 1, 1},
-    {NOTE_CS6, 8, 1, 1},
-    {NOTE_DS6, 8, 1, 1},
-    {NOTE_DS6, 8, 1, 1},
-    {NOTE_CS6, 8, 1, 1},
-    {NOTE_CS6, 8, 1, 1},
-    {NOTE_DS6, 8, 1, 1},
-    {NOTE_DS6, 8, 1, 1},
-    {NOTE_CS6, 8, 1, 1},
-    {NOTE_CS6, 8, 1, 1},
-    {NOTE_DS6, 8, 1, 1},
-    {NOTE_DS6, 8, 1, 1},
+    {NOTE_CS7, 8, 1, 1},
+    {NOTE_CS7, 8, 1, 1},
+    {NOTE_DS7, 8, 1, 1},
+    {NOTE_DS7, 8, 1, 1},
+    {NOTE_CS7, 8, 1, 1},
+    {NOTE_CS7, 8, 1, 1},
+    {NOTE_DS7, 8, 1, 1},
+    {NOTE_DS7, 8, 1, 1},
+    {NOTE_CS7, 8, 1, 1},
+    {NOTE_CS7, 8, 1, 1},
+    {NOTE_DS7, 8, 1, 1},
+    {NOTE_DS7, 8, 1, 1},
     {REST, 8, 1, 1},
 };
 
