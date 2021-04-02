@@ -53,6 +53,11 @@ Movement melody[] = {
     {NOTE_GS5, 8, 1, 1},
     {NOTE_AS5, 8, 1, 1},
     {NOTE_GS5, 2, 1, 1},
+
+    // Timmy
+    {NOTE_GS6, 8, 1, 1},
+    {NOTE_CS7, 8, 1, 1},
+    {NOTE_AS6, 2, 1, 1},
 };
 
 // Calcula a quantidade de movementos da melodia
