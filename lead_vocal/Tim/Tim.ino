@@ -30,7 +30,7 @@ Movement melody[] = {
 
 // Calcula a quantidade de movementos da melodia
 int notes = sizeof(melody)/sizeof(melody[0]);
-int wholenote = (60000 * 4) / tempo;
+int wholenote = (60000 * 4) / TEMPO;
 int divider = 0, note_duration = 0;
 
 void setup() {
@@ -39,20 +39,20 @@ void setup() {
     for (int i=0; i<=notes; i++) {
         // Armazena o movimento atual em uma variável
         Movement movement = melody[i];
-        divider = melody.duration;
+        divider = movement.duration;
 
         // Verifica se é uma nota pontuada
         if (divider > 0) {
             note_duration = (wholenote) / divider;
         } else if (divider < 0) {
-            noteDuration = (wholenote) / abs(divider);
-            noteDuration *= 1.5;
+            note_duration = (wholenote) / abs(divider);
+            note_duration *= 1.5;
         }
 
         // Toca a nota
         tone(BUZZER_PIN, movement.note, note_duration * 0.9);
         delay(note_duration);
-        noTone(buzzer);
+        noTone(BUZZER_PIN);
     }
 }
 
