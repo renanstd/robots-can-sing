@@ -17,18 +17,42 @@ Movement melody[] = {
     {NOTE_CS5, 8, 1, 1},
     {NOTE_DS5, 8, 1, 1},
     {NOTE_DS5, 8, 1, 1},
+    {NOTE_CS5, 8, 1, 1},
+    {NOTE_CS5, 8, 1, 1},
+    {NOTE_DS5, 8, 1, 1},
+    {NOTE_DS5, 8, 1, 1},
+    {NOTE_CS5, 8, 1, 1},
+    {NOTE_CS5, 8, 1, 1},
+    {NOTE_DS5, 8, 1, 1},
+    {NOTE_DS5, 8, 1, 1},
+    {REST, 8, 1, 1},
 };
 
+// Calcula a quantidade de movementos da melodia
 int notes = sizeof(melody)/sizeof(melody[0]);
+int wholenote = (60000 * 4) / tempo;
+int divider = 0, note_duration = 0;
 
 void setup() {
     Serial.begin(9600);
 
     for (int i=0; i<=notes; i++) {
-        Movement mov = melody[i];
-        tone(BUZZER_PIN, mov.note);
-        tone(BUZZER_PIN, mov.note, mov.duration);
-        delay(mov.duration);
+        // Armazena o movimento atual em uma variável
+        Movement movement = melody[i];
+        divider = melody.duration;
+
+        // Verifica se é uma nota pontuada
+        if (divider > 0) {
+            note_duration = (wholenote) / divider;
+        } else if (divider < 0) {
+            noteDuration = (wholenote) / abs(divider);
+            noteDuration *= 1.5;
+        }
+
+        // Toca a nota
+        tone(BUZZER_PIN, movement.note, note_duration * 0.9);
+        delay(note_duration);
+        noTone(buzzer);
     }
 }
 
