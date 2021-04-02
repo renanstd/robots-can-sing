@@ -19,11 +19,16 @@ Movement melody[] = {
     {NOTE_DS5, 8, 1, 1},
 };
 
+int notes = sizeof(melody)/sizeof(melody[0]);
 
 void setup() {
-    for (int i=0; i<sizeof(melody); i++) {
-        tone(BUZZER_PIN, melody[i].note, melody[i].duration);
-        delay(melody[i].duration);
+    Serial.begin(9600);
+
+    for (int i=0; i<=notes; i++) {
+        Movement mov = melody[i];
+        tone(BUZZER_PIN, mov.note);
+        tone(BUZZER_PIN, mov.note, mov.duration);
+        delay(mov.duration);
     }
 }
 
