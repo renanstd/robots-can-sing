@@ -24,7 +24,7 @@ Movement melody[] = {
     {NOTE_CS6, 8, 1, 1},
     {NOTE_CS6, 8, 1, 1},
     {NOTE_DS6, 8, 1, 1},
-    {NOTE_DS6, 4, 1, 1},
+    {NOTE_DS6, 2, 1, 1},
     {REST, 4, 1, 1},
 
     {NOTE_CS6, 8, 1, 1},
@@ -38,7 +38,7 @@ Movement melody[] = {
     {NOTE_CS6, 8, 1, 1},
     {NOTE_CS6, 8, 1, 1},
     {NOTE_DS6, 8, 1, 1},
-    {NOTE_DS6, 4, 1, 1},
+    {NOTE_DS6, 2, 1, 1},
     {REST, 4, 1, 1},
 
     {NOTE_CS6, 8, 1, 1},
@@ -52,7 +52,7 @@ Movement melody[] = {
     {NOTE_GS5, 8, 1, 1},
     {NOTE_GS5, 8, 1, 1},
     {NOTE_AS5, 8, 1, 1},
-    {NOTE_GS5, 4, 1, 1},
+    {NOTE_GS5, 2, 1, 1},
 };
 
 // Calcula a quantidade de movementos da melodia
