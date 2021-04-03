@@ -4,7 +4,7 @@
 #include<LiquidCrystal_I2C.h>
 
 
-const int TEMPO = 140;
+const int TEMPO = 100;
 const int BUZZER_PIN = 11;
 
 struct Movement {
@@ -16,11 +16,89 @@ struct Movement {
 };
 
 Movement melody[] = {
-    {NOTE_E6,  2, 1, 0, 1},
-    {NOTE_E6,  2, 1, 0, 1},
-    {NOTE_DS6, 4, 1, 0, 1},
-    {NOTE_CS6, 2, 1, 0, 1},
+    {NOTE_E7,  -4, 2, 0, 1},
+    {NOTE_E7,  4, 1, 0, 1},
+    {NOTE_DS7, 8, 2, 0, 1},
+    {NOTE_CS7, -4, 1, 0, 1},
+    {REST,     1, 0, 0, 1},
+
+    {NOTE_DS7, 8, 0, 0, 1},
+    {NOTE_DS7, 4, 0, 0, 1},
+    {NOTE_DS7, 4, 0, 0, 1},
+    {NOTE_B6,  4, 0, 0, 1},
+    {REST,     4, 0, 0, 1},
+
+    {NOTE_GS7, 8, 0, 0, 1},
+    {REST,     4, 0, 0, 1},
+    {NOTE_GS7, 4, 0, 0, 1},
+    {NOTE_FS7, 4, 0, 0, 1},
+
+    {NOTE_E7, -4, 2, 0, 1},
+    {NOTE_E7,  4, 1, 0, 1},
+    {NOTE_DS7, 8, 2, 0, 1},
+    {NOTE_CS7, -4, 1, 0, 1},
+    {REST,     -2, 0, 0, 1},
+
+    {NOTE_CS7, 8, 1, 0, 1},
+    {NOTE_DS7, 8, 1, 0, 1},
+    {NOTE_DS7, 4, 1, 0, 1},
+    {NOTE_DS7, 4, 1, 0, 1},
+    {NOTE_CS7, 4, 1, 0, 1},
+    {NOTE_B6,  4, 0, 0, 1},
+    {NOTE_B6,  4, 0, 0, 1},
+    {NOTE_DS7, 8, 1, 0, 1},
+    {NOTE_CS7, 4, 1, 0, 1},
+    {NOTE_B6,  4, 0, 0, 1},
+    {REST,     4, 0, 0, 1},
+
+    {NOTE_E7,  -4, 0, 0, 1},
+    {NOTE_E7,  4, 0, 0, 1},
+    {NOTE_E7,  -4, 0, 0, 1},
+    {REST,     -2, 0, 0, 1},
+
+    {NOTE_B6,  8, 0, 0, 1},
+    {NOTE_B6,  8, 0, 0, 1},
+    {NOTE_B6,  8, 0, 0, 1},
+    {NOTE_B6,  8, 0, 0, 1},
+    {NOTE_B6,  8, 0, 0, 1},
+    {NOTE_B6,  8, 0, 0, 1},
+    {NOTE_B6,  8, 0, 0, 1},
+    {NOTE_AS6, 4, 0, 0, 1},
+    {NOTE_GS6, 4, 0, 0, 1},
+    {NOTE_FS6, 4, 0, 0, 1},
+    {REST,     8, 0, 0, 1},
+
+    // Chorus
+    {NOTE_B5,  2, 0, 0, 1},
     {REST,     2, 0, 0, 1},
+    {NOTE_FS6, 2, 0, 0, 1},
+    {REST,     2, 0, 0, 1},
+    {NOTE_GS6, 2, 0, 0, 1},
+    {REST,     1, 0, 0, 1},
+    {REST,     2, 0, 0, 1},
+
+    {NOTE_B5,  2, 0, 0, 1},
+    {REST,     2, 0, 0, 1},
+    {NOTE_AS6,  2, 0, 0, 1},
+    {REST,     2, 0, 0, 1},
+    {NOTE_B6,  2, 0, 0, 1},
+    {REST,     1, 0, 0, 1},
+    {REST,     2, 0, 0, 1},
+
+    {NOTE_DS6,  2, 0, 0, 1},
+    {REST,     2, 0, 0, 1},
+    {NOTE_AS6,  2, 0, 0, 1},
+    {REST,     2, 0, 0, 1},
+    {NOTE_B6,  2, 0, 0, 1},
+    {REST,     1, 0, 0, 1},
+    {REST,     2, 0, 0, 1},
+
+    {NOTE_CS6, 8, 1, 0, 1},
+    {NOTE_DS6, 8, 1, 0, 1},
+    {NOTE_CS6, -8, 1, 0, 1},
+    {NOTE_B5,  4, 0, 0, 1},
+    {NOTE_FS6, 1, 0, 0, 1},
+    {REST,     1, 0, 0, 1},
 };
 
 byte eye_open[8] = {
